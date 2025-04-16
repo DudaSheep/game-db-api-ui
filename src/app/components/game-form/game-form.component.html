@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-12">
+        <h2>Novo Jogo</h2>
+        <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="name" formControlName="name" required>
+                <div *ngIf="gameForm.get('name')?.invalid && gameForm.get('name')?.touched" class="text-danger">
+                    Nome é obrigatório
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Descrição</label>
+                <textarea class="form-control" id="description" formControlName="description" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-select" id="status" formControlName="status">
+                    <option *ngFor="let status of gameStatuses" [value]="status">{{status}}</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="gameForm.invalid">Salvar</button>
+            <button type="button" class="btn btn-secondary ms-2" (click)="cancel()">Cancelar</button>
+        </form>
+    </div>
+</div>

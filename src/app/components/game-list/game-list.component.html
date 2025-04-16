@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-12">
+        <h2>Lista de Jogos</h2>
+        <div class="mb-3">
+            <label class="form-label">Filtrar por status:</label>
+            <select class="form-select" [(ngModel)]="selectedStatus" (change)="filterGames()">
+                <option [ngValue]="null">Todos</option>
+                <option *ngFor="let status of gameStatuses" [value]="status">{{status}}</option>
+            </select>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let game of filteredGames">
+                        <td>{{game.id}}</td>
+                        <td>{{game.name}}</td>
+                        <td>{{game.description}}</td>
+                        <td>
+                            <select class="form-select" [(ngModel)]="game.status" (change)="updateGameStatus(game)">
+                                <option *ngFor="let status of gameStatuses" [value]="status">{{status}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger btn-sm"
+                                (click)="game.id !== undefined && deleteGame(game.id)">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

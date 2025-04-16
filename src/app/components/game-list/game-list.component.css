@@ -1,0 +1,16 @@
+.table {
+    th {
+        background-color: #f8f9fa;
+    }
+
+    .form-select {
+        min-width: 150px;
+    }
+
+    .btn-danger {
+        &:hover {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+    }
+}
