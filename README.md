@@ -1,27 +1,50 @@
-# GameDbApiUi
+# 🎮 | GameDbApiUi | 🕹️ 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Descrição do Projeto
+Este projeto Angular é uma aplicação web (Game Api) para gerenciar sua coleção de jogos. Ele permite visualizar uma lista de jogos com informações como nome, descrição e status (Finalizado (**FINISHED**), Em Andamento (**ONGOING**), Em Espera (**ONHOLD**)) e também oferece a funcionalidade de adicionar novos jogos à sua biblioteca através de um formulário dedicado.
 
-## Code scaffolding
+## ⚙️ Configuração do Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1.  **Clone o repositórios:**
 
-## Build
+    ```bash
+    git clone https://github.com/DudaSheep/game-db-api-ui
+    git clone https://github.com/DudaSheep/game-db-api-springboot  # Projeto Game Api 
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2.  **Navegue até o diretório do projeto:**
 
-## Running unit tests
+    ```bash
+    cd game-db-api-ui
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3.  **Execute a aplicação:**
 
-## Running end-to-end tests
+    ```bash
+    npm install
+    ng serve
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4.  **Acesse o Site:**
 
-## Further help
+    Abra o navegador e acesse `http://localhost:4200/`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## ️✨ Tecnologias Utilizadas
+
+- ▶️ Angular  
+- ▶️ HTML 
+- ▶️ CSS  
+- ▶️ TypeScript 
+
+---
+
+## ️ Imagens do Projeto
+
+![ListadeJogos](/src/assets/img/img1.PNG)
+---
+![CadastrodeJogos](/src/assets/img/img2.PNG)
